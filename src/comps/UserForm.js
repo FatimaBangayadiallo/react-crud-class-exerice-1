@@ -23,6 +23,15 @@ class UserForm extends React.Component {
    };
    handleSubmit(e){
      e.preventDefault()
+     // object with the new users
+     let user = {
+       name: this.state.name,
+       email : this.state.email,
+       gender:this.state.gender
+     };
+     // to call the addUser function in app.js
+     this.props.addUser(user);
+
      this.setState({name: "",email: "",gender: ""})
    };
 

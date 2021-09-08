@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import UserForm from './comps/UserForm.js';
 import UserList from './comps/UserList.js';
+import React ,{useState} from 'react';
 
 function App() {
   // users state array
@@ -11,7 +12,7 @@ function App() {
   function addUser(user){
     // makes a copy off the current user useState
     // and add a new user.
-    setState([...users, user]);
+    setUsers([...users, user]);
   };
   return (
     <div className="App">
